@@ -19,6 +19,8 @@ mongoose.connect(url, { useNewUrlParser: true }, (err) => {
   }
 })
 
+var hbs = require('hbs')
+hbs.registerHelper('dateFormat', require('handlebars-dateformat'))
 
 var app = express();
 
